@@ -1,6 +1,9 @@
 # Environment variables
 .env
-.env.local
+.venv
+env/
+venv/
+ENV/
 
 # Python
 __pycache__/
@@ -8,7 +11,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -25,10 +27,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
-venv/
-ENV/
-
 # IDE
 .idea/
 .vscode/
@@ -37,4 +35,4 @@ ENV/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
