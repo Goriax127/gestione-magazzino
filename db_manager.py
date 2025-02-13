@@ -1,13 +1,12 @@
-import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from dotenv import load_dotenv
 from datetime import datetime
 
 class DatabaseManager:
     def __init__(self):
-        load_dotenv()
-        self.conn = psycopg2.connect("postgresql://postgres:pPzplFUUKBqzjkDNhpmEKXzlMvFpjkZm@autorack.proxy.rlwy.net:11988/railway")
+        # URL del database Railway
+        DATABASE_URL = "postgresql://postgres:pPzplFUUKBqzjkDNhpmEKXzlMvFpjkZm@autorack.proxy.rlwy.net:11988/railway"
+        self.conn = psycopg2.connect(DATABASE_URL)
         self.conn.autocommit = True
 
     def insert_movimento(self, codice, descrizione, quantita, tipo_movimento):
